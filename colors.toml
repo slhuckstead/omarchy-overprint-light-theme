@@ -1,0 +1,59 @@
+# Overprint
+#
+# Generated, not chosen. The three inks of this press are:
+#   #0F4C81  #FF5A4D  #FFE800
+# Most colours below are something this press can physically make: an ink alone,
+# two inks overprinted, or all three. Where no ink or overprint lands near an
+# ANSI hue the colour is SYNTHESISED at that hue, inheriting this press's own
+# lightness and saturation -- a little over half the palette, in practice.
+# Snapping to the nearest real ink instead would let two slots collapse onto one
+# indistinguishable colour, which breaks the one-colour-one-meaning contract the
+# terminal relies on.
+#
+# Contrast targets are deliberately NOT uniform across the hues. Driving every
+# hue to one ratio flattened lightness across the palette to under a
+# just-noticeable difference, leaving hue as the only thing separating two
+# slots -- which is precisely what colour-vision deficiency takes away. Red and
+# green carry pass/fail meaning, so they are pushed furthest apart.
+#
+# Every hue clears its target against `selection`, the extreme of the three
+# grounds that carry text, and therefore against `background` and
+# `lighter_background` as well.
+#
+# Regenerate with:  python3 ~/.local/share/overprint/generate.py
+
+
+mode = "light"
+
+accent = "#0C4474"
+selection = "#C3BFB8"
+muted = "#4D4D4D"
+
+background = "#DAD6CE"
+dark_background = "#D3CFC7"
+darker_background = "#CBC7C0"
+lighter_background = "#D7D3CB"
+
+foreground = "#1F222A"
+dark_foreground = "#545454"
+light_foreground = "#313131"
+bright_foreground = "#13151B"
+
+red = "#A00007"
+yellow = "#2F2C1B"
+orange = "#733800"
+green = "#042100"
+cyan = "#093B3B"
+blue = "#0C4474"
+magenta = "#643060"
+brown = "#574C41"
+
+bright_red = "#740004"
+bright_yellow = "#1A190D"
+bright_green = "#000200"
+bright_cyan = "#042626"
+bright_blue = "#062F53"
+bright_magenta = "#472044"
+
+hyprland_active_border = "rgba(0c4474ee) rgba(2c445cee) rgba(8b0005ee) 45deg"
+hyprland_inactive_border = "rgba(adadadaa)"
